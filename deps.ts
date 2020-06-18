@@ -4,5 +4,5 @@ export function isEven(number: number): boolean | Error {
   if(!isNumber(number)) {
     throw Error('invalid type, expecting a value of type number');
   }
-  return (number % 2 === 0)
+  return !(number & 1)
 }
